@@ -5,7 +5,7 @@ O objetivo foi compreender, implementar e documentar as melhores práticas para 
 
 ---
 
-## 📖 O que aprendi e desenvolvi neste projeto:
+## 📖 O que desenvolvi neste projeto:
 
 - ⚙️ **Configuração do projeto Cypress do zero**  
   Estruturação inicial e ajustes necessários para um ambiente de testes funcional.
@@ -55,3 +55,4 @@ Este projeto serve como **referência prática e didática** para quem deseja cr
 - JavaScript  
 - Git & GitHub  
 - Cypress Cloud
+
