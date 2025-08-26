@@ -22,5 +22,8 @@
     "QA Engineer",
     "Cypress Cloud",
     "GitHub Actions"
-  ]
+  ],
+  "devDependencies": {
+    "cypress": "^13.12.0"
+  }
 }

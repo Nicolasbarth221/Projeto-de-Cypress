@@ -1,12 +1,25 @@
 name: End-to-end tests
-on: push
+on: [push, pull_request]
+
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      - name: Cypress run
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Cypress run (record to Cloud)
         uses: cypress-io/github-action@v6
         with:
-          command: npm run test:ci
+          command: npm run test:cloud
+          browser: chrome
+        env:
+          CYPRESS_RECORD_KEY: ${{ secrets.CYPRESS_RECORD_KEY }}
